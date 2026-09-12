@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,24 +9,15 @@
 
 <style>
 
-:root{
---bg:#090909;
---panel:#111;
---text:#f5f1e8;
---gold:#c9a35b;
---line:#292929;
---muted:#aaa;
-}
-
 *{
 box-sizing:border-box;
 }
 
 body{
 margin:0;
-background:var(--bg);
-color:var(--text);
-font-family:Arial,Helvetica,sans-serif;
+background:#090909;
+color:#f5f1e8;
+font-family:Arial, sans-serif;
 }
 
 .container{
@@ -35,57 +27,51 @@ margin:auto;
 }
 
 nav{
-border-bottom:1px solid var(--line);
-padding:20px 0;
+padding:25px 0;
+border-bottom:1px solid #292929;
 }
 
 .logo{
-font-family:Georgia,serif;
 font-size:28px;
-letter-spacing:3px;
+letter-spacing:4px;
+font-family:Georgia,serif;
 }
 
 .logo span{
-color:var(--gold);
+color:#c9a35b;
 }
 
 .hero{
 text-align:center;
-padding:90px 0;
-background:radial-gradient(circle,#282116,#090909);
+padding:80px 0;
 }
 
 .hero h1{
+font-size:65px;
 font-family:Georgia,serif;
-font-size:70px;
 }
 
 .hero p{
-color:var(--muted);
+color:#aaa;
 font-size:18px;
 }
 
 .btn{
 display:inline-block;
 padding:14px 25px;
-border:1px solid var(--gold);
+border:1px solid #c9a35b;
 color:white;
 text-decoration:none;
-margin:8px;
+margin:10px;
 }
 
 .primary{
-background:var(--gold);
+background:#c9a35b;
 color:#000;
 }
 
 section{
-padding:70px 0;
-}
-
-h2{
-font-family:Georgia,serif;
-font-size:42px;
+padding:60px 0;
 }
 
 .grid{
@@ -95,14 +81,13 @@ gap:25px;
 }
 
 .card{
-background:var(--panel);
-border:1px solid var(--line);
-overflow:hidden;
+background:#111;
+border:1px solid #292929;
 }
 
 .card img{
 width:100%;
-height:430px;
+height:420px;
 object-fit:cover;
 }
 
@@ -110,44 +95,33 @@ object-fit:cover;
 padding:20px;
 }
 
+h2,h3{
+font-family:Georgia,serif;
+}
+
+.description{
+color:#aaa;
+line-height:1.7;
+}
+
 .price{
-color:var(--gold);
-font-size:18px;
+color:#c9a35b;
+font-size:20px;
 font-weight:bold;
 }
 
 .sizes button{
 padding:10px 15px;
 margin:5px;
+border:1px solid #c9a35b;
 background:#090909;
 color:white;
-border:1px solid var(--gold);
 }
 
-.description{
-color:var(--muted);
-line-height:1.8;
-}
-
-.review-box{
-border-top:1px solid var(--line);
-margin-top:30px;
-padding-top:25px;
-}
-
-.review-box input,
-.review-box textarea{
-width:100%;
-padding:12px;
-background:#090909;
-color:white;
-border:1px solid #333;
-margin:8px 0;
-}
-
-.stars{
-color:var(--gold);
-font-size:22px;
+footer{
+text-align:center;
+padding:30px;
+color:#777;
 }
 
 @media(max-width:700px){
@@ -168,14 +142,11 @@ font-size:45px;
 
 <body>
 
-
 <nav>
 <div class="container">
-
 <div class="logo">
 A<span>-F</span>.BRAND
 </div>
-
 </div>
 </nav>
 
@@ -187,19 +158,16 @@ A<span>-F</span>.BRAND
 <h1>A-F.brand</h1>
 
 <p>
-Premium fashion with a luxury attitude.
+Premium fashion for modern style.
 </p>
 
-
 <a class="btn primary" href="#collection">
-Explore Collection
+Collection
 </a>
-
 
 <a class="btn" href="https://wa.me/923417884713">
-Order WhatsApp
+WhatsApp
 </a>
-
 
 </div>
 
@@ -209,28 +177,25 @@ Order WhatsApp
 
 <h2>The Collection</h2>
 
-
 <div class="grid">
 
 
 <div class="card">
 
-<img src="black-wide-leg-trousers-1.jpeg">
+<img src="black-wide-leg-trousers-1.jpeg" alt="Black Wide Leg Trousers">
 
 <div class="card-body">
 
 <h3>Black Wide-Leg Trousers</h3>
 
 <p class="description">
-A-F.brand Black Wide-Leg Trousers are designed for a modern luxury wardrobe.
-The relaxed silhouette gives a confident look while keeping comfort in focus.
-Perfect for casual styling, street luxury outfits and premium everyday wear.
+A-F.brand Black Wide-Leg Trousers are made for a modern luxury wardrobe.
+The relaxed wide-leg silhouette gives a confident appearance while keeping
+comfort and style balanced. Perfect for casual outfits, premium street style
+and elegant everyday looks.
 </p>
 
-<div class="price">
-Rs. 3,999
-</div>
-
+<div class="price">Rs. 3,999</div>
 
 <h4>Select Size</h4>
 
@@ -242,34 +207,30 @@ Rs. 3,999
 <button>XXL</button>
 </div>
 
-
-<a class="btn primary" href="https://wa.me/923417884713?text=I%20want%20Black%20Wide%20Leg%20Trousers">
+<a class="btn primary" href="https://wa.me/923417884713">
 Buy Now
 </a>
 
 </div>
-
 </div>
-
 
 
 
 <div class="card">
 
-<img src="gray-wide-leg-trousers.jpeg">
+<img src="gray-wide-leg-trousers.jpeg" alt="Gray Wide Leg Trousers">
 
 <div class="card-body">
 
 <h3>Gray Wide-Leg Trousers</h3>
 
 <p class="description">
-Premium gray trousers with a relaxed wide-leg fit.
-A clean minimal design made for effortless styling and a sophisticated appearance.
+A premium gray trouser designed with a relaxed fit and clean finish.
+Its versatile color makes it easy to style with shirts, tees and complete
+A-F.brand outfits.
 </p>
 
-<div class="price">
-Rs. 3,999
-</div>
+<div class="price">Rs. 3,999</div>
 
 <h4>Select Size</h4>
 
@@ -281,35 +242,29 @@ Rs. 3,999
 <button>XXL</button>
 </div>
 
-
-<a class="btn primary" href="https://wa.me/923417884713?text=I%20want%20Gray%20Wide%20Leg%20Trousers">
+<a class="btn primary" href="https://wa.me/923417884713">
 Buy Now
 </a>
 
 </div>
-
 </div>
-
 
 
 
 <div class="card">
 
-<img src="black-pinstripe-set.jpeg">
+<img src="black-pinstripe-set.jpeg" alt="Black Pinstripe Set">
 
 <div class="card-body">
 
 <h3>Black Pinstripe Set</h3>
 
 <p class="description">
-A statement outfit combining a premium black top with elegant pinstripe trousers.
-Designed for customers who want a bold but refined luxury look.
+A statement luxury outfit featuring a refined black top with pinstripe
+trousers. Designed for a bold, elegant and confident appearance.
 </p>
 
-<div class="price">
-Rs. 6,999
-</div>
-
+<div class="price">Rs. 6,999</div>
 
 <h4>Select Size</h4>
 
@@ -321,34 +276,29 @@ Rs. 6,999
 <button>XXL</button>
 </div>
 
-
-<a class="btn primary" href="https://wa.me/923417884713?text=I%20want%20Black%20Pinstripe%20Set">
+<a class="btn primary" href="https://wa.me/923417884713">
 Buy Now
 </a>
 
 </div>
-
 </div>
 
 
 
 <div class="card">
 
-<img src="ivory-pinstripe-set.jpeg">
+<img src="ivory-pinstripe-set.jpeg" alt="Ivory Pinstripe Set">
 
 <div class="card-body">
 
 <h3>Ivory Shirt & Pinstripe Trousers</h3>
 
 <p class="description">
-A premium ivory shirt paired with stylish pinstripe trousers.
-A balanced look created for elegant occasions and modern fashion lovers.
+A sophisticated ivory shirt paired with premium pinstripe trousers.
+A clean luxury look created for special occasions and modern fashion lovers.
 </p>
 
-<div class="price">
-Rs. 7,499
-</div>
-
+<div class="price">Rs. 7,499</div>
 
 <h4>Select Size</h4>
 
@@ -360,34 +310,29 @@ Rs. 7,499
 <button>XXL</button>
 </div>
 
-
-<a class="btn primary" href="https://wa.me/923417884713?text=I%20want%20Ivory%20Pinstripe%20Set">
+<a class="btn primary" href="https://wa.me/923417884713">
 Buy Now
 </a>
 
 </div>
-
 </div>
 
 
 
 <div class="card">
 
-<img src="black-brown-set.jpeg">
+<img src="black-brown-set.jpeg" alt="Black Brown Set">
 
 <div class="card-body">
 
 <h3>Black Henley & Brown Trousers</h3>
 
 <p class="description">
-A refined combination of a black henley style top with brown trousers.
-A comfortable premium outfit with a strong luxury identity.
+A premium combination of a black henley style top with brown trousers.
+A comfortable yet stylish outfit with a strong luxury identity.
 </p>
 
-<div class="price">
-Rs. 6,999
-</div>
-
+<div class="price">Rs. 6,999</div>
 
 <h4>Select Size</h4>
 
@@ -399,13 +344,11 @@ Rs. 6,999
 <button>XXL</button>
 </div>
 
-
-<a class="btn primary" href="https://wa.me/923417884713?text=I%20want%20Black%20Brown%20Set">
+<a class="btn primary" href="https://wa.me/923417884713">
 Buy Now
 </a>
 
 </div>
-
 </div>
 
 
@@ -413,26 +356,20 @@ Buy Now
 
 </div>
 
-</section>id="m0q8ce"
-<section>
+</section><section>
 
 <div class="container">
 
-
 <div class="review-box">
 
-<h2>
-Customer Reviews
-</h2>
-
+<h2>Customer Reviews</h2>
 
 <div class="stars">
 ★★★★★
 </div>
 
-
-<p>
-Share your experience with A-F.brand products.
+<p class="description">
+Love our products? Share your experience with A-F.brand.
 </p>
 
 
@@ -449,7 +386,6 @@ Submit Review
 
 </div>
 
-
 </div>
 
 </section>
@@ -460,23 +396,21 @@ Submit Review
 
 <div class="container">
 
-
 <h2>
 The A-F.brand Identity
 </h2>
 
-
 <p class="description">
 
-A-F.brand represents quiet luxury and bold presence.
-Every piece is designed with a modern vision, premium style
-and a confident attitude for everyday fashion.
+A-F.brand represents premium fashion with a clean and confident identity.
+Every piece is selected to deliver comfort, elegance and a modern luxury
+appearance.
 
 </p>
 
 
 <a class="btn" href="https://www.instagram.com/afbrand80/" target="_blank">
-Follow Instagram
+Instagram
 </a>
 
 
@@ -486,19 +420,16 @@ Follow Instagram
 
 
 
-
 <section>
 
 <div class="container">
-
 
 <h2>
 Make It Yours
 </h2>
 
-
 <p class="description">
-Ask about available pieces, sizes and current collection.
+For sizes, availability and orders contact us on WhatsApp.
 </p>
 
 
@@ -528,7 +459,6 @@ WhatsApp +92 341 7884713
 </div>
 
 </footer>
-
 
 
 </body>
