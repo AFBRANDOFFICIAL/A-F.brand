@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A-F.brand Admin</title>
+
+<style>
+
+body{
+font-family:Arial;
+padding:30px;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:8px 0;
+}
+
+button{
+padding:12px 25px;
+background:#c9a35b;
+border:0;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<h1>
+A-F.brand Admin Panel
+</h1>
+
+
+<input id="name" placeholder="Product Name">
+
+<input id="price" placeholder="Price">
+
+<textarea id="description" placeholder="Description"></textarea>
+
+<input id="image" placeholder="Image Link">
+
+
+<button id="add">
+Add Product
+</button>
+
+
+<p id="msg"></p>
+
+
+
+<script type="module">
+
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+
+const firebaseConfig = {
+
+apiKey: "AIzaSyBm0vK3se38fPbPl2zLZkyMztcTP-2zpiU",
+
+authDomain: "af-brand-jabai.firebaseapp.com",
+
+projectId: "af-brand-jabai",
+
+storageBucket: "af-brand-jabai.firebasestorage.app",
+
+messagingSenderId: "794703482293",
+
+appId: "1:794703482293:web:b4bde7e5a3af0723621dfc"
+
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+
+
+document.getElementById("add").onclick = async ()=>{
+
+
+await addDoc(collection(db,"products"),{
+
+name: document.getElementById("name").value,
+
+price: document.getElementById("price").value,
+
+description: document.getElementById("description").value,
+
+image: document.getElementById("image").value
+
+});
+
+
+document.getElementById("msg").innerHTML="Product Added ✅";
+
+
+};
+
+
+</script>
+
+
+</body>
+
+</html>
