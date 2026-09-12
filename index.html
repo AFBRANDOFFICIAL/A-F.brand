@@ -7,10 +7,24 @@
 <title>A-F.brand | Premium Fashion</title>
 
 <style>
+
+:root{
+--bg:#090909;
+--panel:#111;
+--text:#f5f1e8;
+--gold:#c9a35b;
+--line:#292929;
+--muted:#aaa;
+}
+
+*{
+box-sizing:border-box;
+}
+
 body{
 margin:0;
-background:#090909;
-color:#f5f1e8;
+background:var(--bg);
+color:var(--text);
 font-family:Arial,Helvetica,sans-serif;
 }
 
@@ -21,7 +35,7 @@ margin:auto;
 }
 
 nav{
-border-bottom:1px solid #333;
+border-bottom:1px solid var(--line);
 padding:20px 0;
 }
 
@@ -32,13 +46,13 @@ letter-spacing:3px;
 }
 
 .logo span{
-color:#c9a35b;
+color:var(--gold);
 }
 
 .hero{
 text-align:center;
 padding:90px 0;
-background:radial-gradient(circle,#241f16,#090909);
+background:radial-gradient(circle,#282116,#090909);
 }
 
 .hero h1{
@@ -47,21 +61,21 @@ font-size:70px;
 }
 
 .hero p{
-color:#aaa;
+color:var(--muted);
 font-size:18px;
 }
 
 .btn{
 display:inline-block;
 padding:14px 25px;
-border:1px solid #c9a35b;
+border:1px solid var(--gold);
 color:white;
 text-decoration:none;
-margin:10px;
+margin:8px;
 }
 
 .primary{
-background:#c9a35b;
+background:var(--gold);
 color:#000;
 }
 
@@ -71,7 +85,7 @@ padding:70px 0;
 
 h2{
 font-family:Georgia,serif;
-font-size:40px;
+font-size:42px;
 }
 
 .grid{
@@ -81,13 +95,14 @@ gap:25px;
 }
 
 .card{
-background:#111;
-border:1px solid #333;
+background:var(--panel);
+border:1px solid var(--line);
+overflow:hidden;
 }
 
 .card img{
 width:100%;
-height:420px;
+height:430px;
 object-fit:cover;
 }
 
@@ -96,11 +111,47 @@ padding:20px;
 }
 
 .price{
-color:#c9a35b;
+color:var(--gold);
+font-size:18px;
 font-weight:bold;
 }
 
+.sizes button{
+padding:10px 15px;
+margin:5px;
+background:#090909;
+color:white;
+border:1px solid var(--gold);
+}
+
+.description{
+color:var(--muted);
+line-height:1.8;
+}
+
+.review-box{
+border-top:1px solid var(--line);
+margin-top:30px;
+padding-top:25px;
+}
+
+.review-box input,
+.review-box textarea{
+width:100%;
+padding:12px;
+background:#090909;
+color:white;
+border:1px solid #333;
+margin:8px 0;
+}
+
+.stars{
+color:var(--gold);
+font-size:22px;
+}
+
 @media(max-width:700px){
+
 .grid{
 grid-template-columns:1fr;
 }
@@ -108,6 +159,7 @@ grid-template-columns:1fr;
 .hero h1{
 font-size:45px;
 }
+
 }
 
 </style>
@@ -116,11 +168,14 @@ font-size:45px;
 
 <body>
 
+
 <nav>
 <div class="container">
+
 <div class="logo">
 A<span>-F</span>.BRAND
 </div>
+
 </div>
 </nav>
 
@@ -132,16 +187,19 @@ A<span>-F</span>.BRAND
 <h1>A-F.brand</h1>
 
 <p>
-Luxury fashion with a modern confident identity.
+Premium fashion with a luxury attitude.
 </p>
+
 
 <a class="btn primary" href="#collection">
 Explore Collection
 </a>
 
+
 <a class="btn" href="https://wa.me/923417884713">
 Order WhatsApp
 </a>
+
 
 </div>
 
@@ -151,27 +209,42 @@ Order WhatsApp
 
 <h2>The Collection</h2>
 
+
 <div class="grid">
 
 
 <div class="card">
 
-<img src="black-wide-leg-trousers-1.jpeg" style="width:100%;max-width:500px;object-fit:cover;">
+<img src="black-wide-leg-trousers-1.jpeg">
 
 <div class="card-body">
 
 <h3>Black Wide-Leg Trousers</h3>
 
-<p>
-Premium black wide-leg trousers with a clean luxury look.
+<p class="description">
+A-F.brand Black Wide-Leg Trousers are designed for a modern luxury wardrobe.
+The relaxed silhouette gives a confident look while keeping comfort in focus.
+Perfect for casual styling, street luxury outfits and premium everyday wear.
 </p>
 
 <div class="price">
-Rs. 4,999
+Rs. 3,999
 </div>
 
-<a class="btn" href="https://wa.me/923417884713">
-Order WhatsApp
+
+<h4>Select Size</h4>
+
+<div class="sizes">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+<button>XXL</button>
+</div>
+
+
+<a class="btn primary" href="https://wa.me/923417884713?text=I%20want%20Black%20Wide%20Leg%20Trousers">
+Buy Now
 </a>
 
 </div>
@@ -189,16 +262,28 @@ Order WhatsApp
 
 <h3>Gray Wide-Leg Trousers</h3>
 
-<p>
-Relaxed gray trousers designed for modern styling.
+<p class="description">
+Premium gray trousers with a relaxed wide-leg fit.
+A clean minimal design made for effortless styling and a sophisticated appearance.
 </p>
 
 <div class="price">
-Rs. 4,999
+Rs. 3,999
 </div>
 
-<a class="btn" href="https://wa.me/923417884713">
-Order WhatsApp
+<h4>Select Size</h4>
+
+<div class="sizes">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+<button>XXL</button>
+</div>
+
+
+<a class="btn primary" href="https://wa.me/923417884713?text=I%20want%20Gray%20Wide%20Leg%20Trousers">
+Buy Now
 </a>
 
 </div>
@@ -214,26 +299,36 @@ Order WhatsApp
 
 <div class="card-body">
 
-<h3>
-Black Pinstripe Set
-</h3>
+<h3>Black Pinstripe Set</h3>
 
-<p>
-Black ringer tee with premium pinstripe trousers.
+<p class="description">
+A statement outfit combining a premium black top with elegant pinstripe trousers.
+Designed for customers who want a bold but refined luxury look.
 </p>
 
 <div class="price">
-Rs. 7,499
+Rs. 6,999
 </div>
 
-<a class="btn" href="https://wa.me/923417884713">
-Order WhatsApp
+
+<h4>Select Size</h4>
+
+<div class="sizes">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+<button>XXL</button>
+</div>
+
+
+<a class="btn primary" href="https://wa.me/923417884713?text=I%20want%20Black%20Pinstripe%20Set">
+Buy Now
 </a>
 
 </div>
 
 </div>
-
 
 
 
@@ -243,26 +338,36 @@ Order WhatsApp
 
 <div class="card-body">
 
-<h3>
-Ivory Shirt Set
-</h3>
+<h3>Ivory Shirt & Pinstripe Trousers</h3>
 
-<p>
-Elegant ivory shirt paired with pinstripe trousers.
+<p class="description">
+A premium ivory shirt paired with stylish pinstripe trousers.
+A balanced look created for elegant occasions and modern fashion lovers.
 </p>
 
 <div class="price">
-Rs. 7,999
+Rs. 7,499
 </div>
 
-<a class="btn" href="https://wa.me/923417884713">
-Order WhatsApp
+
+<h4>Select Size</h4>
+
+<div class="sizes">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+<button>XXL</button>
+</div>
+
+
+<a class="btn primary" href="https://wa.me/923417884713?text=I%20want%20Ivory%20Pinstripe%20Set">
+Buy Now
 </a>
 
 </div>
 
 </div>
-
 
 
 
@@ -272,20 +377,31 @@ Order WhatsApp
 
 <div class="card-body">
 
-<h3>
-Black Henley & Brown Trousers
-</h3>
+<h3>Black Henley & Brown Trousers</h3>
 
-<p>
-A refined premium everyday outfit.
+<p class="description">
+A refined combination of a black henley style top with brown trousers.
+A comfortable premium outfit with a strong luxury identity.
 </p>
 
 <div class="price">
-Rs. 7,499
+Rs. 6,999
 </div>
 
-<a class="btn" href="https://wa.me/923417884713">
-Order WhatsApp
+
+<h4>Select Size</h4>
+
+<div class="sizes">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+<button>XXL</button>
+</div>
+
+
+<a class="btn primary" href="https://wa.me/923417884713?text=I%20want%20Black%20Brown%20Set">
+Buy Now
 </a>
 
 </div>
@@ -297,27 +413,42 @@ Order WhatsApp
 
 </div>
 
-</section><section id="about">
+</section>id="m0q8ce"
+<section>
 
 <div class="container">
 
+
+<div class="review-box">
+
 <h2>
-The A-F.brand Identity
+Customer Reviews
 </h2>
 
+
+<div class="stars">
+★★★★★
+</div>
+
+
 <p>
-Quiet luxury. Bold presence.
+Share your experience with A-F.brand products.
 </p>
 
-<p>
-A-F.brand is built around premium fashion with a clean, sophisticated identity. 
-Every piece is designed for a modern and confident wardrobe.
-</p>
+
+<input type="text" placeholder="Your Name">
 
 
-<a class="btn" href="https://www.instagram.com/afbrand80/" target="_blank">
-Follow Instagram
-</a>
+<textarea placeholder="Write your review"></textarea>
+
+
+<button class="btn primary">
+Submit Review
+</button>
+
+
+</div>
+
 
 </div>
 
@@ -325,33 +456,57 @@ Follow Instagram
 
 
 
-<section id="contact">
+<section>
 
 <div class="container">
+
+
+<h2>
+The A-F.brand Identity
+</h2>
+
+
+<p class="description">
+
+A-F.brand represents quiet luxury and bold presence.
+Every piece is designed with a modern vision, premium style
+and a confident attitude for everyday fashion.
+
+</p>
+
+
+<a class="btn" href="https://www.instagram.com/afbrand80/" target="_blank">
+Follow Instagram
+</a>
+
+
+</div>
+
+</section>
+
+
+
+
+<section>
+
+<div class="container">
+
 
 <h2>
 Make It Yours
 </h2>
 
-<p>
+
+<p class="description">
 Ask about available pieces, sizes and current collection.
 </p>
 
 
-<a class="btn primary" 
-href="https://wa.me/923417884713" 
+<a class="btn primary"
+href="https://wa.me/923417884713"
 target="_blank">
 
 WhatsApp +92 341 7884713
-
-</a>
-
-
-<a class="btn" 
-href="https://www.instagram.com/afbrand80/" 
-target="_blank">
-
-@AFBRAND80
 
 </a>
 
@@ -375,159 +530,7 @@ target="_blank">
 </footer>
 
 
+
 </body>
-</html>.product-detail{
-background:#111;
-border:1px solid #292929;
-padding:35px;
-margin-top:40px;
-}
 
-.product-detail h2{
-font-family:Georgia,serif;
-font-size:35px;
-}
-
-.description{
-color:#aaa;
-line-height:1.8;
-font-size:16px;
-}
-
-.details{
-margin-top:20px;
-color:#ddd;
-}
-
-.sizes button{
-background:#090909;
-color:white;
-border:1px solid #c9a35b;
-padding:10px 18px;
-margin:5px;
-cursor:pointer;
-}<section class="product-detail">
-
-<div class="container">
-
-<h2>Black Wide-Leg Trousers</h2>
-
-<div class="price">
-Rs. 3,999
-</div>
-
-<p class="description">
-Elevate your wardrobe with A-F.brand Black Wide-Leg Trousers.
-Designed with a modern relaxed silhouette, these trousers bring
-together comfort, confidence and premium street-luxury style.
-The clean black color makes them easy to pair with shirts,
-tees and complete A-F.brand looks for every occasion.
-</p>
-
-
-<div class="details">
-
-<h3>Product Details</h3>
-
-<ul>
-<li>Premium quality fabric</li>
-<li>Modern wide-leg relaxed fit</li>
-<li>Comfortable everyday wear</li>
-<li>Color: Black</li>
-<li>Sizes Available: S, M, L, XL, XXL</li>
-</ul>
-
-</div>
-
-
-<h3>Select Size</h3>
-
-<div class="sizes">
-
-<button>S</button>
-<button>M</button>
-<button>L</button>
-<button>XL</button>
-<button>XXL</button>
-
-</div>
-
-
-<a class="buy-btn"
-href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%20want%20to%20order%20Black%20Wide-Leg%20Trousers">
-
-BUY NOW
-
-</a>
-
-
-</div>
-
-</section>
-
-.sizes button:hover{
-background:#c9a35b;
-color:#000;
-}
-
-.buy-btn{
-display:inline-block;
-background:#c9a35b;
-color:#000;
-padding:14px 25px;
-margin-top:20px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.review-box{
-margin-top:35px;
-border-top:1px solid #333;
-padding-top:25px;
-}
-
-.stars{
-color:#c9a35b;
-font-size:22px;
-}
-
-.review-box input,
-.review-box textarea{
-width:100%;
-background:#090909;
-border:1px solid #333;
-color:white;
-padding:12px;
-margin:8px 0;
-}
-
-.review-box textarea{
-height:100px;
-}BLACK WIDE-LEG TROUSERS
-
-Rs. 3,999
-
-[ S ] [ M ] [ L ] [ XL ] [ XXL ]
-
-Description:
-Elevate your wardrobe with A-F.brand Black Wide-Leg Trousers...
-(clean luxury description)
-
-Details:
-• Premium fabric
-• Relaxed wide-leg fit
-• Comfortable everyday wear
-• Modern luxury style
-
-★★★★★
-Customer Reviews
-
-Name:
-[________]
-
-Your Review:
-[________________]
-
-[Submit Review]
-
-[ BUY NOW ]
+</html>
