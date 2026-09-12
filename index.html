@@ -449,5 +449,23 @@ WhatsApp +92 341 7884713
 
 
 </body>
+<script type="module">
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+const firebaseConfig = {
+apiKey: "AIzaSyBm0vK3se38fPbPl2zLZkyMztcTP-2zpiU",
+authDomain: "af-brand-jabai.firebaseapp.com",
+projectId: "af-brand-jabai",
+storageBucket: "af-brand-jabai.firebasestorage.app",
+messagingSenderId: "794703482293",
+appId: "1:794703482293:web:b4bde7e5a3af0723621dfc",
+measurementId: "G-SCPD0MJV2F"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+</script>
 </html>
