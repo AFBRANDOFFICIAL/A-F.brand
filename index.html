@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A-F.brand — premium luxury jackets, shirts and statement pants.">
+<meta name="description" content="A-F.brand — premium fashion with refined shirts, trousers and complete looks.">
 <title>A-F.brand | Premium Fashion</title>
 <style>
 :root{--bg:#090909;--panel:#111;--text:#f5f1e8;--muted:#a9a49b;--gold:#c9a35b;--line:#292929}
@@ -17,13 +17,14 @@ nav{position:sticky;top:0;z-index:10;background:rgba(9,9,9,.94);backdrop-filter:
 .eyebrow{color:var(--gold);letter-spacing:.32em;text-transform:uppercase;font-size:12px;margin:22px 0 12px}.hero h1{font:500 clamp(42px,7vw,78px)/1.05 Georgia,serif;margin:0}.hero p{max-width:600px;margin:22px auto;color:var(--muted);font-size:17px}
 .btn{display:inline-block;border:1px solid var(--gold);padding:14px 23px;margin:8px 5px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}.btn.primary{background:var(--gold);color:#090909}.btn:hover{transform:translateY(-2px)}
 section{padding:90px 0}.section-head{text-align:center;margin-bottom:42px}.section-head h2{font:500 42px Georgia,serif;margin:0 0 10px}.section-head p{color:var(--muted);margin:0}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .card{background:var(--panel);border:1px solid var(--line);overflow:hidden}.visual{aspect-ratio:4/5;background:#151515;overflow:hidden}.visual img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);aspect-ratio:4/5;background:#151515;overflow:hidden;gap:2px}.gallery img{width:100%;height:100%;object-fit:cover;display:block}
 .card-body{padding:22px}.tag{color:var(--gold);font-size:11px;letter-spacing:.15em;text-transform:uppercase}.card h3{font:24px Georgia,serif;margin:7px 0 5px}.card p{color:var(--muted);margin:0 0 16px;font-size:14px}.price{color:var(--gold);font-size:14px;letter-spacing:.08em;font-weight:bold;margin-bottom:12px}
 .product-btn{display:inline-block;border:1px solid #555;padding:11px 14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.product-btn:hover{border-color:var(--gold);color:var(--gold)}
 .story{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.story-art{min-height:430px;background:linear-gradient(135deg,#181818,#0b0b0b);border:1px solid var(--line);display:grid;place-items:center}.story-art div{font:76px Georgia,serif;color:var(--gold)}.story h2{font:44px Georgia,serif;font-weight:500}.story p{color:var(--muted);font-size:16px}
 .contact{background:#101010;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}footer{padding:35px 0;text-align:center;color:#777;font-size:12px;letter-spacing:.1em}
-@media(max-width:760px){.links{gap:12px;font-size:10px}.grid,.story{grid-template-columns:1fr}.story{gap:25px}.hero{min-height:70vh}.monogram{font-size:70px}}
+@media(max-width:760px){.links{gap:12px;font-size:10px}.grid{grid-template-columns:1fr}.story{grid-template-columns:1fr;gap:25px}.hero{min-height:70vh}.monogram{font-size:70px}.gallery{aspect-ratio:3/4}}
 </style>
 </head>
 <body>
@@ -37,7 +38,7 @@ section{padding:90px 0}.section-head{text-align:center;margin-bottom:42px}.secti
 <div class="monogram">A<span>F</span></div>
 <div class="eyebrow">Premium Fashion</div>
 <h1>A-F.brand</h1>
-<p>Luxury jackets, refined shirts and statement pants designed for a modern, confident wardrobe.</p>
+<p>Luxury shirts, refined trousers and complete looks designed for a modern, confident wardrobe.</p>
 <a class="btn primary" href="#collection">Explore Collection</a>
 <a class="btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27d%20like%20to%20ask%20about%20your%20collection." target="_blank" rel="noopener">Order on WhatsApp</a>
 </div>
@@ -46,53 +47,69 @@ section{padding:90px 0}.section-head{text-align:center;margin-bottom:42px}.secti
 <section id="collection"><div class="container">
 <div class="section-head"><h2>The Collection</h2><p>Premium essentials with a luxury attitude.</p></div>
 <div class="grid">
-
-<article class="card">
-<div class="visual"><img src="images/ivory-jacket.jpeg" alt="Ivory Double-Breasted Jacket"></div>
-<div class="card-body"><div class="tag">Jackets</div><h3>Ivory Double-Breasted Jacket</h3>
-<p>Elegant ivory outerwear with a refined double-breasted silhouette and sophisticated finish.</p>
-<div class="price">Rs. 8,999</div>
-<a class="product-btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27m%20interested%20in%20the%20Ivory%20Double-Breasted%20Jacket%20(Rs.%208%2C999)." target="_blank" rel="noopener">Order on WhatsApp</a></div>
+<article class="card featured">
+  <div class="gallery">
+    <img src="images/black-wide-leg-trousers-1.jpeg" alt="Black Wide-Leg Trousers">
+    <img src="images/black-wide-leg-trousers-2.jpeg" alt="Black Wide-Leg Trousers">
+  </div>
+  <div class="card-body">
+    <div class="tag">Pants</div>
+    <h3>Black Wide-Leg Trousers</h3>
+    <p>Elegant black wide-leg trousers with a clean drape, relaxed fit and refined minimal finish.</p>
+    <div class="price">Rs. 4,999</div>
+    <a class="product-btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27m%20interested%20in%20the%20Black%20Wide-Leg%20Trousers%20%28Rs.%204%2C999%29." target="_blank" rel="noopener">Order on WhatsApp</a>
+  </div>
 </article>
 
 <article class="card">
-<div class="visual"><img src="images/black-zip-jacket.jpeg" alt="Black Minimal Zip Jacket"></div>
-<div class="card-body"><div class="tag">Jackets</div><h3>Black Minimal Zip Jacket</h3>
-<p>Sleek black zip-up outerwear with a high collar and clean modern silhouette.</p>
-<div class="price">Rs. 6,999</div>
-<a class="product-btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27m%20interested%20in%20the%20Black%20Minimal%20Zip%20Jacket%20(Rs.%206%2C999)." target="_blank" rel="noopener">Order on WhatsApp</a></div>
+  <div class="visual"><img src="images/gray-wide-leg-trousers.jpeg" alt="Gray Wide-Leg Trousers"></div>
+  <div class="card-body">
+    <div class="tag">Pants</div>
+    <h3>Gray Wide-Leg Trousers</h3>
+    <p>Relaxed gray wide-leg trousers with a fluid silhouette and understated premium finish.</p>
+    <div class="price">Rs. 4,999</div>
+    <a class="product-btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27m%20interested%20in%20the%20Gray%20Wide-Leg%20Trousers%20%28Rs.%204%2C999%29." target="_blank" rel="noopener">Order on WhatsApp</a>
+  </div>
 </article>
 
 <article class="card">
-<div class="visual"><img src="images/beige-wide-leg-trousers.jpeg" alt="Relaxed Beige Wide-Leg Trousers"></div>
-<div class="card-body"><div class="tag">Pants</div><h3>Relaxed Beige Wide-Leg Trousers</h3>
-<p>Modern wide-leg trousers in an elegant beige tone, made for a clean and comfortable look.</p>
-<div class="price">Rs. 4,999</div>
-<a class="product-btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27m%20interested%20in%20the%20Relaxed%20Beige%20Wide-Leg%20Trousers%20(Rs.%204%2C999)." target="_blank" rel="noopener">Order on WhatsApp</a></div>
+  <div class="visual"><img src="images/black-pinstripe-set.jpeg" alt="Black Ringer Tee and Pinstripe Trousers"></div>
+  <div class="card-body">
+    <div class="tag">Shirts + Pants</div>
+    <h3>Black Ringer Tee &amp; Pinstripe Trousers</h3>
+    <p>A sharp monochrome look pairing a black contrast-trim tee with relaxed pinstripe trousers.</p>
+    <div class="price">Rs. 7,499</div>
+    <a class="product-btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27m%20interested%20in%20the%20Black%20Ringer%20Tee%20%26%20Pinstripe%20Trousers%20%28Rs.%207%2C499%29." target="_blank" rel="noopener">Order on WhatsApp</a>
+  </div>
 </article>
 
 <article class="card">
-<div class="visual"><img src="images/black-brown-outfit.jpeg" alt="Classic Black and Brown Outfit"></div>
-<div class="card-body"><div class="tag">Shirts + Pants</div><h3>Classic Black &amp; Brown Outfit</h3>
-<p>Minimal black henley paired with relaxed brown trousers for an understated premium aesthetic.</p>
-<div class="price">Rs. 7,999</div>
-<a class="product-btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27m%20interested%20in%20the%20Classic%20Black%20%26%20Brown%20Outfit%20(Rs.%207%2C999)." target="_blank" rel="noopener">Order on WhatsApp</a></div>
+  <div class="visual"><img src="images/ivory-pinstripe-set.jpeg" alt="Ivory Shirt and Pinstripe Trousers"></div>
+  <div class="card-body">
+    <div class="tag">Shirts + Pants</div>
+    <h3>Ivory Shirt &amp; Pinstripe Trousers</h3>
+    <p>Soft ivory layering over tailored pinstripe trousers for an effortless elevated look.</p>
+    <div class="price">Rs. 7,999</div>
+    <a class="product-btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27m%20interested%20in%20the%20Ivory%20Shirt%20%26%20Pinstripe%20Trousers%20%28Rs.%207%2C999%29." target="_blank" rel="noopener">Order on WhatsApp</a>
+  </div>
 </article>
 
 <article class="card">
-<div class="visual"><img src="images/blue-striped-outfit.jpeg" alt="Blue Striped Overshirt and White Trousers"></div>
-<div class="card-body"><div class="tag">Shirts + Pants</div><h3>Blue Striped Overshirt &amp; White Trousers</h3>
-<p>Relaxed striped overshirt with white wide-leg trousers for a fresh modern casual look.</p>
-<div class="price">Rs. 7,499</div>
-<a class="product-btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27m%20interested%20in%20the%20Blue%20Striped%20Overshirt%20%26%20White%20Trousers%20(Rs.%207%2C499)." target="_blank" rel="noopener">Order on WhatsApp</a></div>
+  <div class="visual"><img src="images/black-brown-set.jpeg" alt="Black Henley and Brown Trousers"></div>
+  <div class="card-body">
+    <div class="tag">Shirts + Pants</div>
+    <h3>Black Henley &amp; Brown Trousers</h3>
+    <p>A refined black henley paired with relaxed brown trousers for an understated premium aesthetic.</p>
+    <div class="price">Rs. 7,499</div>
+    <a class="product-btn" href="https://wa.me/923417884713?text=Hello%20A-F.brand%2C%20I%27m%20interested%20in%20the%20Black%20Henley%20%26%20Brown%20Trousers%20%28Rs.%207%2C499%29." target="_blank" rel="noopener">Order on WhatsApp</a>
+  </div>
 </article>
-
 </div></div></section>
 
 <section id="about"><div class="container story">
 <div class="story-art"><div>AF</div></div>
 <div><div class="eyebrow">The A-F.brand Identity</div><h2>Quiet luxury. Bold presence.</h2>
-<p>A-F.brand is built around premium fashion with a clean, sophisticated identity. From jackets to shirts and stylish pants, every piece is intended to feel elevated without being overdone.</p>
+<p>A-F.brand is built around premium fashion with a clean, sophisticated identity. Each piece is selected to feel elevated, versatile and modern.</p>
 <a class="btn" href="https://www.instagram.com/afbrand80/" target="_blank" rel="noopener">Follow on Instagram</a></div>
 </div></section>
 
