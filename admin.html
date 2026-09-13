@@ -60,15 +60,18 @@ Add Product
 
 <script type="module">
 
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import {
+  getFirestore,
+  collection,
+  addDoc
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
 const firebaseConfig = {
 
-apiKey: "AIzaSyBm0vK3se38fPbPl2zLZkyMztcTP-2zpiU",
+apiKey: "AIzaSyBm0vK3se38fPbPl2zLkyMztcTP-2zpiU",
 
 authDomain: "af-brand-jabai.firebaseapp.com",
 
@@ -78,10 +81,76 @@ storageBucket: "af-brand-jabai.firebasestorage.app",
 
 messagingSenderId: "794703482293",
 
-appId: "1:794703482293:web:b4bde7e5a3af0723621dfc"
+appId: "1:794703482293:web:b4de7e5a3af0723621dfc"
 
 };
 
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+
+document.getElementById("add").addEventListener("click", async () => {
+
+const name = document.getElementById("name").value.trim();
+
+const price = document.getElementById("price").value.trim();
+
+const description = document.getElementById("description").value.trim();
+
+const image = document.getElementById("image").value.trim();
+
+const msg = document.getElementById("msg");
+
+
+if (!name || !price || !description || !image) {
+
+msg.innerHTML = "Please fill all fields ❌";
+
+return;
+
+}
+
+
+msg.innerHTML = "Adding product...";
+
+
+try {
+
+await addDoc(collection(db, "products"), {
+
+name: name,
+price: price,
+description: description,
+image: image
+
+});
+
+
+msg.innerHTML = "Product Added Successfully ✅";
+
+
+document.getElementById("name").value = "";
+
+document.getElementById("price").value = "";
+
+document.getElementById("description").value = "";
+
+document.getElementById("image").value = "";
+
+
+} catch (error) {
+
+console.error(error);
+
+msg.innerHTML = "Error: " + error.message + " ❌";
+
+}
+
+});
+
+</script>
 
 const app = initializeApp(firebaseConfig);
 
