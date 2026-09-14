@@ -145,13 +145,13 @@ addPhoto.addEventListener("click", () => {
 
 photoInput.addEventListener("change", () => {
 
-  const file = photoInput.files[0];
+  const files = Array.from(photoInput.files);
 
-  if(!file){
+  if(files.length === 0){
     return;
   }
 
-  selectedPhotos.push(file);
+  selectedPhotos.push(...files);
 
   showPreview();
 
