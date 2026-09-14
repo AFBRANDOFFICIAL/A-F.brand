@@ -65,7 +65,7 @@ Add Product
 
 
 <script type="module">
-alert("JavaScript working!");
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
@@ -76,50 +76,45 @@ import {
 
 
 const firebaseConfig = {
-
   apiKey: "AIzaSyBm0vK3se38fPbP12zLkyMztcTP-2zpiU",
-
   authDomain: "af-brand-jabai.firebaseapp.com",
-
   projectId: "af-brand-jabai",
-
   storageBucket: "af-brand-jabai.firebasestorage.app",
-
   messagingSenderId: "794703482293",
-
   appId: "1:794703482293:web:b4de7e5a3af0723621dfc"
-
 };
 
 
 const app = initializeApp(firebaseConfig);
-
 const db = getFirestore(app);
 
 
-document.getElementById("add").addEventListener("click", async function () {
+document.getElementById("add").addEventListener("click", async () => {
 
   const name = document.getElementById("name").value.trim();
-
   const price = document.getElementById("price").value.trim();
-
   const description = document.getElementById("description").value.trim();
-
+  const longDescription = document.getElementById("longDescription").value.trim();
   const image = document.getElementById("image").value.trim();
+  const imagesText = document.getElementById("images").value.trim();
+  const sizesText = document.getElementById("sizes").value.trim();
 
   const msg = document.getElementById("msg");
 
 
-  if (!name || !price || !description || !image) {
-
-    msg.innerHTML = "Please fill all fields ❌";
-
+  if (!name || !price || !description || !longDescription || !image || !sizesText) {
+    msg.innerHTML = "Please fill all required fields ❌";
     return;
-
   }
 
 
   msg.innerHTML = "Adding product...";
+
+
+  const images = imagesText
+    .split("\n")
+    .map(url => url.trim())
+    .filter(url => url !== "");
 
 
   try {
@@ -127,12 +122,15 @@ document.getElementById("add").addEventListener("click", async function () {
     await addDoc(collection(db, "products"), {
 
       name: name,
-
       price: price,
-
       description: description,
-
-      image: image
+      longDescription: longDescription,
+      image: image,
+      images: images,
+      sizes: sizesText
+        .split(",")
+        .map(size => size.trim())
+        .filter(size => size !== "")
 
     });
 
@@ -140,10 +138,18 @@ document.getElementById("add").addEventListener("click", async function () {
     msg.innerHTML = "Product Added Successfully ✅";
 
 
+    document.getElementById("name").value = "";
+    document.getElementById("price").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("longDescription").value = "";
+    document.getElementById("image").value = "";
+    document.getElementById("images").value = "";
+    document.getElementById("sizes").value = "";
+
+
   } catch (error) {
 
     console.error(error);
-
     msg.innerHTML = "Error: " + error.message + " ❌";
 
   }
@@ -151,39 +157,6 @@ document.getElementById("add").addEventListener("click", async function () {
 });
 
 </script>
-
-</script>
-
-const app = initializeApp(firebaseConfig);
-
-const db = getFirestore(app);
-
-
-
-document.getElementById("add").onclick = async ()=>{
-
-
-await addDoc(collection(db,"products"),{
-
-name: document.getElementById("name").value,
-
-price: document.getElementById("price").value,
-
-description: document.getElementById("description").value,
-
-image: document.getElementById("image").value
-
-});
-
-
-document.getElementById("msg").innerHTML="Product Added ✅";
-
-
-};
-
-
-</script>
-
 
 </body>
 
