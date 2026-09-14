@@ -533,21 +533,55 @@ Buy Now
 <script type="module">
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {
+  getFirestore,
+  collection,
+  getDocs
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-apiKey: "AIzaSyBm0vK3se38fPbPl2zLZkyMztcTP-2zpiU",
-authDomain: "af-brand-jabai.firebaseapp.com",
-projectId: "af-brand-jabai",
-storageBucket: "af-brand-jabai.firebasestorage.app",
-messagingSenderId: "794703482293",
-appId: "1:794703482293:web:b4bde7e5a3af0723621dfc",
-measurementId: "G-SCPD0MJV2F"
+  apiKey: "AIzaSyBm0vK3se38fPbP12zLZkyMztcTP-2z",
+  authDomain: "af-brand-jabai.firebaseapp.com",
+  projectId: "af-brand-jabai",
+  storageBucket: "af-brand-jabai.firebasestorage.app",
+  messagingSenderId: "794703482293",
+  appId: "1:794703482293:web:b4bd7e5a3af0723621dfc"
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const db = getFirestore(app);
 
+const products = document.getElementById("products");
+
+const querySnapshot = await getDocs(collection(db, "products"));
+
+products.innerHTML = "";
+
+querySnapshot.forEach((doc) => {
+
+  const p = doc.data();
+
+  products.innerHTML += `
+    <div class="card">
+
+      <img src="${p.image}" alt="${p.name}">
+
+      <h3>${p.name}</h3>
+
+      <p>${p.description}</p>
+
+      <div class="price">
+        Rs. ${p.price}
+      </div>
+
+      <a class="btn primary" href="product.html?id=${doc.id}">
+        View Product
+      </a>
+
+    </div>
+  `;
+
+});
 
 </script>
 </html>
