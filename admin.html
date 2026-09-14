@@ -71,17 +71,17 @@ import {
 
 const firebaseConfig = {
 
-apiKey: "AIzaSyBm0vK3se38fPbPl2zLkyMztcTP-2zpiU",
+  apiKey: "AIzaSyBm0vK3se38fPbP12zLkyMztcTP-2zpiU",
 
-authDomain: "af-brand-jabai.firebaseapp.com",
+  authDomain: "af-brand-jabai.firebaseapp.com",
 
-projectId: "af-brand-jabai",
+  projectId: "af-brand-jabai",
 
-storageBucket: "af-brand-jabai.firebasestorage.app",
+  storageBucket: "af-brand-jabai.firebasestorage.app",
 
-messagingSenderId: "794703482293",
+  messagingSenderId: "794703482293",
 
-appId: "1:794703482293:web:b4de7e5a3af0723621dfc"
+  appId: "1:794703482293:web:b4de7e5a3af0723621dfc"
 
 };
 
@@ -91,64 +91,60 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-document.getElementById("add").addEventListener("click", async () => {
+document.getElementById("add").addEventListener("click", async function () {
 
-const name = document.getElementById("name").value.trim();
+  const name = document.getElementById("name").value.trim();
 
-const price = document.getElementById("price").value.trim();
+  const price = document.getElementById("price").value.trim();
 
-const description = document.getElementById("description").value.trim();
+  const description = document.getElementById("description").value.trim();
 
-const image = document.getElementById("image").value.trim();
+  const image = document.getElementById("image").value.trim();
 
-const msg = document.getElementById("msg");
-
-
-if (!name || !price || !description || !image) {
-
-msg.innerHTML = "Please fill all fields ❌";
-
-return;
-
-}
+  const msg = document.getElementById("msg");
 
 
-msg.innerHTML = "Adding product...";
+  if (!name || !price || !description || !image) {
+
+    msg.innerHTML = "Please fill all fields ❌";
+
+    return;
+
+  }
 
 
-try {
-
-await addDoc(collection(db, "products"), {
-
-name: name,
-price: price,
-description: description,
-image: image
-
-});
+  msg.innerHTML = "Adding product...";
 
 
-msg.innerHTML = "Product Added Successfully ✅";
+  try {
+
+    await addDoc(collection(db, "products"), {
+
+      name: name,
+
+      price: price,
+
+      description: description,
+
+      image: image
+
+    });
 
 
-document.getElementById("name").value = "";
-
-document.getElementById("price").value = "";
-
-document.getElementById("description").value = "";
-
-document.getElementById("image").value = "";
+    msg.innerHTML = "Product Added Successfully ✅";
 
 
-} catch (error) {
+  } catch (error) {
 
-console.error(error);
+    console.error(error);
 
-msg.innerHTML = "Error: " + error.message + " ❌";
+    msg.innerHTML = "Error: " + error.message + " ❌";
 
-}
+  }
 
 });
+
+</script>
 
 </script>
 
