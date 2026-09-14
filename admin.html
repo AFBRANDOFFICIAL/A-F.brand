@@ -18,6 +18,7 @@ input,textarea{
 width:100%;
 padding:12px;
 margin:8px 0;
+box-sizing:border-box;
 }
 
 button{
@@ -81,7 +82,6 @@ margin:0;
 >
 
 <div id="preview"></div>
-<div id="preview"></div>
 
 <input id="sizes" placeholder="Sizes e.g. S, M, L, XL">
 
@@ -94,13 +94,15 @@ Add Product
 
 <script type="module">
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
   getFirestore,
   collection,
   addDoc
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
 const firebaseConfig = {
@@ -117,31 +119,21 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-/* YOUR NEW IMGBB KEY */
+/* IMGBB API KEY */
 
-const IMGBB_API_KEY = 26b98aaaf4942c94fc67c0e5bad6bc09
+const IMGBB_API_KEY = "PASTE_YOUR_IMGBB_KEY_HERE";
 
 
-const addPhoto = document.getElementById("addPhoto");
 const photoInput = document.getElementById("photoInput");
 const preview = document.getElementById("preview");
 
 
-/* STORE SELECTED PHOTOS */
+/* SELECTED PHOTOS */
 
 let selectedPhotos = [];
 
 
-/* ADD PHOTO BUTTON */
-
-addPhoto.addEventListener("click", () => {
-
-  photoInput.click();
-
-});
-
-
-/* WHEN PHOTO IS SELECTED */
+/* PHOTO SELECT */
 
 photoInput.addEventListener("change", () => {
 
@@ -160,7 +152,7 @@ photoInput.addEventListener("change", () => {
 });
 
 
-/* SHOW PHOTOS */
+/* SHOW PREVIEW */
 
 function showPreview(){
 
@@ -252,9 +244,13 @@ document.getElementById("add").addEventListener("click", async () => {
     const imageUrls = [];
 
 
-    /* UPLOAD PHOTOS ONE BY ONE */
+    /* UPLOAD ALL PHOTOS */
 
-    for(let i = 0; i < selectedPhotos.length; i++){
+    for(
+      let i = 0;
+      i < selectedPhotos.length;
+      i++
+    ){
 
       msg.innerHTML =
         "Uploading photo " +
@@ -296,16 +292,18 @@ document.getElementById("add").addEventListener("click", async () => {
       }
 
 
-      imageUrls.push(data.data.url);
+      imageUrls.push(
+        data.data.url
+      );
 
     }
 
 
+    /* SAVE TO FIRESTORE */
+
     msg.innerHTML =
       "Saving product... ⏳";
 
-
-    /* SAVE PRODUCT */
 
     await addDoc(
       collection(db,"products"),
